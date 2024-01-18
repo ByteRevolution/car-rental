@@ -10,7 +10,9 @@ int main()
     call();
     return 0;
 }
-call(){
+int call(){
+    revant;
     printf("%d",revant);
+    return 0;
 }
 
