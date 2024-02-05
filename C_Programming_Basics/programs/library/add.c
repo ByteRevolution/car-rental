@@ -1,7 +1,8 @@
 #include<stdio.h>
 int add(int a,int b)
-{    
-    return (a+b);
+{
+    printf("\nsum is %d",a+b);
+    return 0;
 }
 
 

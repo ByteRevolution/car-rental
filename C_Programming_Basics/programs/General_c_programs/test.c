@@ -14,7 +14,7 @@ int main(){
 	printf("double :%ld\n",sizeof(double));
 	printf("long double :%ld\n",sizeof(long double));
 	printf("char :%ld\n",sizeof(char));
-	printf("boolean :%ld\n",sizeof(_Bool));
+    printf("boolean :%ld\n",sizeof(_Bool));
 return 0;
 
 }
