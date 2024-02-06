@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Rental System Flowchart</title>
+<style>
+  /* Styles for the body */
+  body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-x: hidden; /* Hide horizontal overflow */
+  }
+
+  /* Styles for the flowchart */
+  .flowchart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%; /* Ensure flowchart does not exceed viewport width */
+    overflow-x: hidden; /* Hide horizontal overflow */
+  }
+  .box {
+    width: 180px;
+    height: 180px; /* Adjusted height for images */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px; /* Decreased margin between boxes */
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    transform: translateY(0);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Provided image URL */
+  }
+  .box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  .box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #FF758C, #FF7EB3);
+    z-index: -1;
+    transition: transform 0.3s ease;
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+  .box:hover::before {
+    transform: scaleY(1);
+  }
+  .box.start::before {
+    background: linear-gradient(45deg, #73C8A9, #37AFAB);
+  }
+  .box.end::before {
+    background: linear-gradient(45deg, #FFA57C, #FFD25A);
+  }
+  .box.decision::before {
+    background: linear-gradient(45deg, #6D8CF7, #6D8CF7);
+  }
+  .arrow {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgba(255, 255, 255, 0.9);
+  }
+
+  /* Media queries for responsive design */
+  @media screen and (max-width: 768px) {
+    .box {
+      width: 140px;
+      height: 140px;
+      font-size: 14px;
+      padding: 15px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .box {
+      width: 100px;
+      height: 100px;
+      font-size: 12px;
+      padding: 10px;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="flowchart">
+  <div class="box start animated">
+    Start
+    <div class="arrow"></div>
+  </div>
+  <div class="box decision animated">
+    Initialize Cars and Customers
+    <div class="arrow"></div>
+  </div>
+  <div class="box decision animated">
+    Display Menu and User Input Choice
+    <div class="arrow"></div>
+  </div>
+  <div class="box animated">
+    Display Cars and Customer List
+    <div class="arrow"></div>
+  </div>
+  <div class="box decision animated">
+    User Chooses Menu Option (1-10)
+    <div class="arrow"></div>
+  </div>
+  <div class="box decision animated">
+    Switch on User Choice
+    <div class="arrow"></div>
+  </div>
+  <div class="box decision animated">
+    Process User Choice
+    <div class="arrow"></div>
+  </div>
+  <div class="box decision animated">
+    Loop
+    <div class="arrow"></div>
+  </div>
+  <div class="box decision animated">
+    User Chooses Exit
+    <div class="arrow"></div>
+  </div>
+  <div class="box end animated">
+    End
+  </div>
+</div>
+</body>
+</html>
+

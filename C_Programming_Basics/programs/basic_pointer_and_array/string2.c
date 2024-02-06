@@ -6,7 +6,7 @@ int main()
   //  char revant;
     char input[25];
     printf("enter string\n");
-    scanf("%s",&input);
+    scanf("%[^\n]s",&input);
     printf("you entered %s",input);
     
     //scanf("%c",&revant);
