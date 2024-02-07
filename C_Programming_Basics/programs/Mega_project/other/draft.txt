@@ -1,0 +1,13 @@
+this document is about the car rental system.
+structures :
+            car 
+            coustemer
+functions :
+            addcar
+            updatecar
+            displaycar
+            
+            addcoustemer
+            updatesoustemer
+            removecoustemer
+
