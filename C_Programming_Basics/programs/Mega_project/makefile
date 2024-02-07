@@ -1,15 +1,15 @@
 CC = gcc 
-CFLAGS = -Wall -Wextra -O3
+CFLAGS = -Wall -Wextra -O2 -I ./src/head
 SDIR = ./src
 ODIR = ./obj
 OUT = ./out
 CFILES = $(wildcard $(SDIR)/*.c)
 OFILES = $(patsubst $(SDIR)/%.c,$(ODIR)/%.o,$(CFILES))
 
-all : main run  
+all : main  
 
 main : $(OFILES)	
-	$(CC) $(CFLAGS) -o main -I ./src $^
+	$(CC) $(CFLAGS) -o main  $^
 	mv main out
 
 $(OFILES):$(CFILES)

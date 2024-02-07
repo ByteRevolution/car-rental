@@ -2,5 +2,8 @@
 #include"headers.h"
 int main()
 {
- init_display();
+ 
+    init_display();
+    car();
 }
+
