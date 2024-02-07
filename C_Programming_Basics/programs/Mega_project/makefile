@@ -6,9 +6,9 @@ OUT = ./out
 CFILES = $(wildcard $(SDIR)/*.c)
 OFILES = $(patsubst $(SDIR)/%.c,$(ODIR)/%.o,$(CFILES))
 
-all : main  
+all : $(OUT)/main  
 
-main : $(OFILES)	
+$(OUT)/main : $(OFILES)	
 	$(CC) $(CFLAGS) -o main  $^
 	mv main out
 
@@ -18,5 +18,5 @@ $(OFILES):$(CFILES)
 
 .PHONY : clean 
 clean :
-	rm -f main ./obj/*
+	rm -f out/main ./obj/*
 
